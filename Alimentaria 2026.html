@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض Alimentaria للأغذية والمشروبات 2026 - شركة الموج للمعارض الدولية</title>
+    <link rel="icon" type="image/png" href="logo almouj .png" sizes="32*32">
+    <meta name="description" content="انضموا إلى المعرض التجاري الدولي الرائد في قطاع الغذاء والضيافة في برشلونة، إسبانيا، بدعم من شركة الموج إكسبو.">
+    <meta name="keywords" content="معرض Alimentaria, أغذية ومشروبات, ضيافة, برشلونة 2026, الموج إكسبو, Hostelco">
+    
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#daa520',
+                        accent: '#0ea5e9'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(30,64,175,0.85));
+        }
+        
+        .gallery-image-container {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .gallery-image-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-image-container .gallery-image {
+            transition: transform 0.5s ease;
+        }
+        .gallery-image-container:hover .gallery-image {
+            transform: scale(1.05);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af, #0ea5e9);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    
+    <header class="bg-white/95 backdrop-blur-sm shadow-md fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html"> <img src="logo almouj .png" alt="Al Mouj Logo" class="h-full" width="160"> </a>
+            
+            <a href="index.html">   <button class="btn-primary text-white rounded-lg px-5 py-2 whitespace-nowrap" >
+                <span class="flex items-center">
+                    <span class="mr-1">الصفحة الرئيسية</span>
+                    <div class="w-5 h-5 flex items-center justify-center">
+                        <i class="home"></i>
+                    </div>
+                </span>
+            </button>     
+          </a>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <button class="bg-white border border-gray-300 rounded-button px-3 py-1 text-sm text-gray-700 hover:bg-gray-50 transition-all duration-300 hover:scale-105 whitespace-nowrap">
+                    <span class="flex items-center">
+                        <span class="mr-1">English</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-global-line"></i>
+                        </div>
+                    </span>
+                </button>
+                <button class="btn-primary text-white rounded-lg px-5 py-2 whitespace-nowrap" onclick="window.location.href='https://typecard.com/418518d1/'">
+                    <span class="flex items-center">
+                        <span class="mr-1">تواصل معنا</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                    </span>
+                </button> 
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-button">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-lg">
+            <div class="container mx-auto px-4 py-2">
+                <div class="flex flex-col space-y-2">
+                    <a href="index.html" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">الرئيسية</a>
+                    <a href="index.html#about" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">من نحن</a>
+                    <a href="exhibitions.html" class="mobile-nav-link px-4 py-3 text-primary bg-primary/10 font-bold transition-all duration-300 rounded-lg">المعارض</a>
+                    <a href="services.html" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">خدماتنا</a>
+                    <a href="index.html#contact" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-32 pb-20 bg-gray-800">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=futuristic%20food%20and%20beverage%20exhibition%2C%20vibrant%20display%20of%20international%20cuisine%2C%20professional%20networking%2C%20sense%20of%20innovation%20and%20global%20trade%2C%20Barcelona%20backdrop&width=1920&height=1080&seq=alimentaria_hero&orientation=landscape');"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+            <div class="max-w-4xl text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    معرض Alimentaria للأغذية والمشروبات 2026
+                </h1>
+                <p class="text-xl text-white/90 mb-8">
+                    المعرض التجاري الدولي الرائد في قطاع الغذاء والضيافة في إسبانيا وحوض البحر المتوسط، ومنصة مرجعية دولية لقطاع الأغذية والمشروبات.
+                </p>
+                <div class="bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg inline-block px-6 py-2">
+                    <p class="text-lg text-white font-semibold">تجربة فريدة في قطاع الأغذية والمشروبات</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <div class="lg:col-span-2">
+                    <div class="space-y-12">
+                        <div data-aos="fade-up">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-4">عن المعرض</h2>
+                            <p class="text-gray-700 leading-relaxed">
+                                معرض Alimentaria 2026 هو الحدث التجاري المهني الأكثر شمولاً في قطاع الأغذية والمشروبات، ويُقام بالتعاون مع معرض Hostelco للمعدات الفندقية وخدمات الضيافة. يشكل هذا التعاون منصة تجمع كامل سلسلة القيمة: من المواد الخام إلى التجهيز وخدمة المطاعم. يُعد المعرض فعالاً في ربط الصناعيين والمشترين عبر برامج B2B، كما يوفر فرصًا للابتكار من خلال عروض مثل Alimentaria Trends وجلسات الطهي الحية والمناطق المخصصة.
+                            </p>
+                        </div>
+                        
+                        <div data-aos="fade-up">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">الموضوعات الرئيسية للمعرض</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-gray-50 p-6 rounded-lg text-center border border-gray-200">
+                                    <i class="ri-award-line text-4xl text-primary mb-3"></i>
+                                    <h3 class="text-xl font-semibold text-gray-800">الابتكار والاتجاهات الغذائية</h3>
+                                </div>
+                                <div class="bg-gray-50 p-6 rounded-lg text-center border border-gray-200">
+                                    <i class="ri-restaurant-line text-4xl text-primary mb-3"></i>
+                                    <h3 class="text-xl font-semibold text-gray-800">الضيافة ومعدات الفنادق</h3>
+                                </div>
+                                <div class="bg-gray-50 p-6 rounded-lg text-center border border-gray-200">
+                                    <i class="ri-global-line text-4xl text-primary mb-3"></i>
+                                    <h3 class="text-xl font-semibold text-gray-800">التجارة الدولية والأعمال</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div data-aos="fade-up">
+                            <h2 class="text-3xl font-bold text-gray-900 mb-6">القطاعات والفئات المستهدفة</h2>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full">شركات تصنيع الأغذية والمشروبات</span>
+                                <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full">تجار الجملة والتجزئة</span>
+                                <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full">قطاع الضيافة (فنادق ومطاعم)</span>
+                                <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full">المستوردون والمصدرون</span>
+                                <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full">شركات التكنولوجيا الغذائية الناشئة</span>
+                                <span class="bg-primary/10 text-primary font-medium px-4 py-2 rounded-full">موزعو معدات الضيافة والتغليف</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <aside class="lg:sticky top-28 h-fit">
+                    <div class="bg-gray-50 rounded-xl shadow-md p-6" data-aos="fade-left">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-4">معلومات أساسية</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <i class="ri-calendar-line text-xl text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">التاريخ:</span>
+                                    <span>23 إلى 26 مارس 2026</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-map-pin-line text-xl text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">الموقع:</span>
+                                    <span>Fira de Barcelona – Gran Via، برشلونة، إسبانيا</span>
+                                </div>
+                            </li>
+                             <li class="flex items-start">
+                                <i class="ri-time-line text-xl text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">الدورية:</span>
+                                    <span>كل عامين</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="ri-global-line text-xl text-accent mr-3 mt-1"></i>
+                                <div>
+                                    <span class="font-semibold block">الموقع الرسمي:</span>
+                                    <a href="https://www.alimentaria.com" target="_blank" class="text-blue-600 hover:underline">alimentaria.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                             <a href="https://typecard.com/418518d1/" class="w-full btn-primary text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center text-center">
+                                 <i class="ri-send-plane-line ml-2"></i>
+                                 سجل اهتمامك الآن
+                             </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+   
+    
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 جميع الحقوق محفوظة لشركة الموج للمعارض الدولية.</p>
+            <p class="text-sm mt-2">تصميم وتطوير بواسطة فريق الموج.</p>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
