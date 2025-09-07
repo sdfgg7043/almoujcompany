@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الموج للمعارض الدولية</title>
+    <link rel="icon" type="image/png" href="logo almouj .png" sizes="32*32">
+    <meta name="description" content="شركة الموج إكسبو رائدة في تنظيم المعارض والمؤتمرات الدولية بمعايير عالمية وخبرات متميزة">
+    <meta name="keywords" content="معارض دولية, مؤتمرات, تنظيم فعاليات, الموج إكسبو, معارض تجارية">
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#daa520',
+                        accent: '#0ea5e9'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px )', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #1e40af;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1e3a8a;
+        }
+        
+        /* Enhanced Animations */
+        .countdown-item {
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .countdown-item:nth-child(2 ) {
+            animation-delay: 0.5s;
+        }
+        
+        .countdown-item:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .countdown-item:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+        
+        .countdown-item::after {
+            content: ':';
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2rem;
+            color: #fff;
+        }
+        
+        .countdown-item:last-child::after {
+            display: none;
+        }
+        
+        .partner-logo {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .partner-logo:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: translateY(-10px) scale(1.1);
+            color: #1e40af;
+        }
+        
+        .service-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0,0,0,0.1), rgba(30,64,175,0.8));
+        }
+        
+        /* Enhanced Form Styles */
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        input, textarea, select {
+            transition: all 0.3s ease;
+        }
+        
+        /* Custom Checkbox */
+        .custom-checkbox {
+            position: relative;
+            padding-right: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        
+        .checkmark {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-checkbox:hover input ~ .checkmark {
+            border-color: #1e40af;
+            transform: scale(1.1);
+        }
+        
+        .custom-checkbox input:checked ~ .checkmark {
+            background-color: #1e40af;
+            border-color: #1e40af;
+        }
+        
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+        
+        .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        /* Tab Styles */
+        .tab-button {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .tab-button.active {
+            background-color: #1e40af;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(30, 64, 175, 0.3);
+        }
+        
+        .tab-button:not(.active):hover {
+            background-color: rgba(30, 64, 175, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        /* Enhanced Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af, #0ea5e9);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.3);
+        }
+        
+        /* Parallax Effect */
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        /* Statistics Counter Animation */
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        /* Exhibition & Blog Card Hover Effects */
+        .exhibition-card, .blog-card {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .exhibition-card:hover, .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .exhibition-card:hover .exhibition-image, .blog-card:hover .blog-image {
+            transform: scale(1.1);
+        }
+        
+        .exhibition-image, .blog-image {
+            transition: transform 0.5s ease;
+        }
+        
+        /* Floating Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #1e40af, #0ea5e9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(30, 64, 175, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            animation: bounce-slow 2s infinite;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(30, 64, 175, 0.4);
+        }
+        
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1e40af, #0ea5e9);
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+        
+        /* Newsletter Section */
+        .newsletter-bg {
+            background: linear-gradient(135deg, #1e40af, #0ea5e9);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .newsletter-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1 )"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+        
+        /* Enhanced Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .countdown-item {
+                width: 25%;
+                max-width: 80px;
+                padding: 0.5rem;
+            }           
+            .service-card {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* ✨ NEW: Media Queries for smaller screens */
+   @media (max-width: 480px) {
+     .hero-title { font-size: 1.75rem !important; }
+     .countdown-item div:first-child { font-size: 1.25rem !important; }
+   }
+        @media (max-width: 480px) {
+          .hero-title {
+            font-size: 1.75rem !important;
+          }
+          .countdown-item div:first-child {
+            font-size: 1.25rem !important;
+          }
+        }
+        
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            .bg-white {
+                background-color: #1f2937;
+            }
+            
+            .text-gray-900 {
+                color: #f9fafb;
+            }
+            
+            .text-gray-700 {
+                color: #d1d5db;
+            }
+            .bg-gray-50 {
+                background-color: #374151;
+            }
+            .text-gray-600 {
+                color: #9ca3af;
+            }
+        }
+
+        #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #001f3f; /* أزرق داكن */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+  }
+
+  .welcome-text {
+    text-align: center;
+    line-height: 1.8em;
+  }
+
+
+    </style>
+</head>
+
+<body class="bg-white">
+    
+    <div id="overlay">
+        <div class="welcome-text">
+          <p><img src="logo almouj .png" alt="almouj company"></p>
+        </div>
+      </div>
+
+
+    <div id="progress-bar" class="progress-bar" style="width: 0%"></div>
+    
+    <header class="bg-white/95 backdrop-blur-sm shadow-md fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-full mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#home"><img src="logo almouj .png" alt="Al Mouj Logo" class="h-12 md:h-16"></a>
+            
+            <nav class="hidden md:flex items-center space-x-1 space-x-reverse">
+                <a href="#home" class="nav-link px-4 py-2 text-gray-800 hover:text-primary font-medium transition-all duration-300 hover:bg-primary/5 rounded-lg">الرئيسية</a>
+                <a href="#about" class="nav-link px-4 py-2 text-gray-800 hover:text-primary font-medium transition-all duration-300 hover:bg-primary/5 rounded-lg">من نحن</a>
+                <a href="#exhibitions" class="nav-link px-4 py-2 text-gray-800 hover:text-primary font-medium transition-all duration-300 hover:bg-primary/5 rounded-lg">المعارض</a>
+                <a href="#services" class="nav-link px-4 py-2 text-gray-800 hover:text-primary font-medium transition-all duration-300 hover:bg-primary/5 rounded-lg">خدماتنا</a>
+                <a href="#contact" class="nav-link px-4 py-2 text-gray-800 hover:text-primary font-medium transition-all duration-300 hover:bg-primary/5 rounded-lg">اتصل بنا</a>
+            </nav>
+            
+            <div class="flex items-center space-x-2 md:space-x-4 space-x-reverse">
+                <button class="hidden sm:flex bg-white border border-gray-300 rounded-button px-3 py-1 text-sm text-gray-700 hover:bg-gray-50 transition-all duration-300 hover:scale-105 whitespace-nowrap">
+                    <span class="flex items-center">
+                        <span class="mr-1">English</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-global-line"></i>
+                        </div>
+                    </span>
+                </button>
+                <button class="btn-primary text-white rounded-button px-3 py-2 md:px-5 text-sm md:text-base whitespace-nowrap" onclick="window.location.href='https://typecard.com/418518d1/'">
+                    <span class="flex items-center">
+                        <span class="mr-1">تواصل معنا</span>
+                        <div class="w-5 h-5 flex items-center justify-center">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                    </span>
+                </button>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 hover:bg-gray-100 rounded-lg transition-colors" id="mobile-menu-button">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t shadow-lg fixed top-0 right-0 h-full w-screen z-50">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold text-primary">القائمة</h3>
+                    <button id="close-mobile-menu" class="w-8 h-8 flex items-center justify-center text-gray-700 hover:bg-gray-100 rounded-lg">
+                        <i class="ri-close-line text-xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a href="#home" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">الرئيسية</a>
+                    <a href="#about" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">من نحن</a>
+                    <a href="#exhibitions" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">المعارض</a>
+                    <a href="#services" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">خدماتنا</a>
+                    <a href="#contact" class="mobile-nav-link px-4 py-3 text-gray-800 hover:text-primary hover:bg-primary/5 font-medium transition-all duration-300 rounded-lg">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative h-screen pt-16 overflow-hidden">
+        <div class="absolute inset-0 w-full h-full parallax" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20exhibition%20hall%20with%20international%20business%20people%20networking%2C%20modern%20architecture%2C%20luxury%20design%2C%20blue%20and%20gold%20color%20scheme%2C%20high-end%20corporate%20event%2C%20global%20business%20conference%2C%20professional%20lighting%2C%20wide%20angle%20view&width=1920&height=1080&seq=hero1&orientation=landscape' ); background-size: cover; background-position: center;"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="max-w-full mx-auto px-4 h-full flex items-center relative z-10">
+            <div class="max-w-4xl text-center md:text-right" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 hero-title">
+                    <span class="block mb-2 animate-slide-up">شركة الموج - بوابتك الى اهم المعارض الدولية في العالم</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-white/90 mb-8 animate-fade-in" style="animation-delay: 0.6s;">
+                    مع الموج، تضمن حضورك في أكبر المعارض الدولية بخبرة احترافية ودعم مستمر لتحقيق أهدافك.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style="animation-delay: 0.8s;">
+                    <button class="btn-primary text-white rounded-button px-6 py-3 text-base md:text-lg font-medium whitespace-nowrap" onclick="window.location.href='https://typecard.com/418518d1/'">
+                        <span class="flex items-center justify-center">
+                            <span>التسجيل السريع</span>
+                            <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                <i class="ri-arrow-left-line"></i>
+                            </div>
+                        </span>
+                    </button>
+                    
+                    <a href="#exhibitions">
+                        <button class="bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-button px-6 py-3 text-base md:text-lg font-medium hover:bg-white/20 transition-all duration-300 hover:scale-105 whitespace-nowrap" >
+                            <span class="flex items-center justify-center">
+                                <span>استكشف المعارض</span>
+                            </span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <a href="Alimentaria 2026.html">
+            <div class="absolute bottom-4 left-0 right-0 z-10" data-aos="fade-up" data-aos-delay="1000">
+                <div class="max-w-full mx-auto px-4">
+                    <div class="bg-white/10 backdrop-blur-md rounded-lg p-2 max-w-3xl mx-auto border border-white/20">
+                        <h3 class="text-base md:text-xl text-white font-bold mb-4 text-center"> المعرض القادم  :  معرض اسبانيا للاغذية 2026</h3>
+                        <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                            <div class="countdown-item bg-primary/80 backdrop-blur-sm rounded-lg p-2 w-1/4 max-w-[80px] text-center">
+                                <div class="text-xl md:text-2xl font-bold text-white" id="days">0</div>
+                                <div class="text-xs text-white/80">يوم</div>
+                            </div>
+                            <div class="countdown-item bg-primary/80 backdrop-blur-sm rounded-lg p-2 w-1/4 max-w-[80px] text-center">
+                                <div class="text-xl md:text-2xl font-bold text-white" id="hours">0</div>
+                                <div class="text-xs text-white/80">ساعة</div>
+                            </div>
+                            <div class="countdown-item bg-primary/80 backdrop-blur-sm rounded-lg p-2 w-1/4 max-w-[80px] text-center">
+                                <div class="text-xl md:text-2xl font-bold text-white" id="minutes">0</div>
+                                <div class="text-xs text-white/80">دقيقة</div>
+                            </div>
+                            <div class="countdown-item bg-primary/80 backdrop-blur-sm rounded-lg p-2 w-1/4 max-w-[80px] text-center">
+                                <div class="text-xl md:text-2xl font-bold text-white" id="seconds">0</div>
+                                <div class="text-xs text-white/80">ثانية</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <section class="py-12 md:py-6 bg-gradient-to-r from-primary to-accent text-white">
+        <div class="max-w-full mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                <div data-aos="fade-up" data-aos-delay="90">
+                    <div class="stat-number text-white text-3xl md:text-4xl" data-count="250">0</div>
+                    <div class="text-white/80 text-sm md:text-base">معرض ومؤتمر</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number text-white text-3xl md:text-4xl" data-count="50">0</div>
+                    <div class="text-white/80 text-sm md:text-base">دولة حول العالم</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number text-white text-3xl md:text-4xl" data-count="15">0</div>
+                    <div class="text-white/80 text-sm md:text-base">سنة من الخبرة</div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-number text-white text-3xl md:text-4xl" data-count="1000">0</div>
+                    <div class="text-white/80 text-sm md:text-base">عميل راضٍ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-20 bg-gray-50">
+        <div class="max-w-full mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">من نحن</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">شركة الموج لإقامة المعارض والمؤتمرات الدولية هي شركة عراقية رائدة تتخذ من كربلاء مقراً لها. تأسست الشركة بعد دمج وتكامل خبرات فريقها في مجال المقاولات مع رجال الأعمال والصناعيين. تسعى شركة الموج لتكون الجسر الذي يربط الأسواق العراقية بالأسواق الدولية، وتعزيز العلاقات الاقتصادية والتجارية من خلال جذب الشركات العالمية إلى السوق العراقي، وتسهيل دخول الشركات العراقية إلى المحافل الدولية.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">رؤيتنا ورسالتنا</h3>
+                    <p class="text-gray-700 mb-6">الرؤية: أن نكون حلقة الوصل الرئيسية لتعزيز النمو الاقتصادي والتبادل الثقافي بين العراق والعالم من خلال خدمات المعارض والمؤتمرات عالية الجودة.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 flex-shrink-0">
+                                <i class="ri-eye-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">الرسالة</h4>
+                                <p class="text-gray-700">تنظيم فعاليات ناجحة ومؤثرة توفر منصة للشركات للتواصل والابتكار والتوسع، مع دعم تنمية الاقتصاد العراقي.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 flex-shrink-0">
+                                <i class="ri-flag-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-900 mb-1">مبادئنا الأساسية</h4>
+                                <p class="text-gray-700">تلتزم الشركة بالمهنية، الابتكار، الجودة، والالتزام تجاه عملائها.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative mt-8 md:mt-0" data-aos="fade-left">
+                    <img src="mn nhn.jpg" alt="فريق الموج إكسبو" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-lg shadow-lg p-4 w-48 hidden md:block" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-primary font-bold text-2xl">15+</div>
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                <i class="ri-calendar-line"></i>
+                            </div>
+                        </div>
+                        <div class="text-gray-700 text-sm">سنوات من الخبرة في تنظيم المعارض الدولية</div>
+                    </div>
+                
+                    <div class="absolute -top-6 -right-6 bg-white rounded-lg shadow-lg p-4 w-48 hidden md:block" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="flex items-center justify-between mb-2">
+                            <div class="text-primary font-bold text-2xl">250+</div>
+                            <div class="w-8 h-8 flex items-center justify-center bg-primary/10 rounded-full text-primary">
+                                <i class="ri-building-line"></i>
+                            </div>
+                        </div>
+                        <div class="text-gray-700 text-sm">معرض ومؤتمر دولي تم تنظيمه بنجاح</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="executive-management" class="py-16 md:py-20 bg-white">
+        <div class="max-w-full mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">الإدارة التنفيذية</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="Mustafa.jpg" alt="رزاق رسول الموسوي" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">رزاق رسول الموسوي</h3>
+                    <p class="text-gray-700 text-sm md:text-base">المدير العام لشركة الموج لإقامة المعارض والمؤتمرات الدولية وأيضًا المدير العام / المالك لشركة الأرجوان الهندسية للمقاولات العامة</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="Razzaq.jpg" alt="مصطفى رزاق رسول الموسوي" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">مصطفى رزاق رسول الموسوي</h3>
+                    <p class="text-gray-700 text-sm md:text-base">المدير المفوض لشركة الموج لإقامة المعارض والمؤتمرات الدولية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="exhibitions" class="relative pt-32 pb-20 bg-gray-800">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=dynamic%20shot%20of%20a%20bustling%20international%20exhibition%20hall%2C%20diverse%20crowd%2C%20modern%20booths%2C%20blue%20and%20gold%20lighting%2C%20sense%20of%20energy%20and%20opportunity&width=1920&height=1080&seq=exhibitions_hero&orientation=landscape' );"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+
+        <div class="max-w-full mx-auto px-4 h-full flex items-center relative z-10">
+            <div class="max-w-4xl text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    بوابتكم إلى أهم المعارض الدولية
+                </h1>
+                <p class="text-xl text-white/90 mb-8">
+                    اكتشفوا مجموعة واسعة من المعارض الدولية المتخصصة التي نغطيها، وكونوا جزءًا من الأحداث التجارية الكبرى حول العالم.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main class="py-20 bg-gray-100">
+        <div class="max-w-full mx-auto px-4">
+            <div class="flex justify-center mb-12" data-aos="fade-up">
+                <div class="bg-white rounded-full p-2 shadow-md">
+                    <button class="tab-button active px-6 py-3 text-base font-semibold rounded-full" data-tab="current">المعارض الحالية</button>
+                    <button class="tab-button px-6 py-3 text-base font-semibold rounded-full" data-tab="past">المعارض السابقة</button>
+                </div>
+            </div>
+
+            <div id="current-tab" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Anuga.png" alt="معرض Anuga" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض Anuga للشركات الغذائية</h3>
+                            <p class="text-gray-600 text-sm mb-4">يُنظم كل ثلاث سنوات ويعتبر حدث مهم جدا للشركات العاملة بمجال صناعة الاغذية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>كولونيا - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>4-8 أكتوبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Anuga.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="The largest exhibition in America.png" alt="معرض CONEXPO-CON/AGG" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض CONEXPO-CON/AGG للبناء</h3>
+                            <p class="text-gray-600 text-sm mb-4">أكبر معرض للبناء والإنشاءات في أمريكا الشمالية، يركز على المعدات الثقيلة والابتكارات.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>لاس فيغاس - الولايات المتحدة</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>3-7 مارس 2026</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="The largest exhibition in America.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Alimentaria 2026.png" alt="معرض Alimentaria" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض Alimentaria للأغذية والمشروبات</h3>
+                            <p class="text-gray-600 text-sm mb-4">المعرض الرائد لقطاع الغذاء والضيافة في إسبانيا وحوض البحر المتوسط.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>برشلونة - إسبانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>23-26 مارس 2026</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Alimentaria 2026.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="ceramitec 2026.png" alt="معرض ceramitec" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض ceramitec لصناعة السيراميك</h3>
+                            <p class="text-gray-600 text-sm mb-4">المعرض العالمي الرائد لصناعة السيراميك المتقدّمة والمواد عالية الأداء.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>ميونيخ - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>24-26 مارس 2026</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="ceramitec 2026.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="birmingham.png" alt="معرض أسبوع البناء" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض أسبوع البناء - برمنغهام</h3>
+                            <p class="text-gray-600 text-sm mb-4">المعرض الدولي الرائد لقطاع المقاولات والبناء، حيث يلتقي كبار المقاولين والمختصين.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>برمنغهام - بريطانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>30 سبتمبر - 2 أكتوبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="birmingham.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Elevators.png" alt="معرض Interlift" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض Interlift للمصاعد</h3>
+                            <p class="text-gray-600 text-sm mb-4">حدث سنوي مهم لشركات المقاولات والشركات العاملة بالمصاعد والسلالم الكهربائية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>نورمبرغ - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>14-17 أكتوبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Elevators.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Beverages.png" alt="معرض drinktec" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض drinktec للمشروبات</h3>
+                            <p class="text-gray-600 text-sm mb-4">يجمع أهم الشركات المصنعة في صناعة المشروبات والأغذية السائلة ويعرض أحدث خطوط الإنتاج.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>ميونيخ - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>15-19 سبتمبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Beverages.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Plastics k.png" alt="معرض K للبلاستيك" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض K للبلاستيك والمطاط</h3>
+                            <p class="text-gray-600 text-sm mb-4">أبرز المعارض العالمية في مجال البلاستيك والمطاط، يستعرض أحدث الابتكارات في المواد الخام.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>دوسلدورف - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>8-15 أكتوبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Plastics k .html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Medica.png" alt="معرض MEDICA" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض MEDICA الطبي</h3>
+                            <p class="text-gray-600 text-sm mb-4">أكبر حدث عالمي في مجال التكنولوجيا الطبية والرعاية الصحية، ويعرض أحدث الابتكارات.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>دوسلدورف - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>17-20 نوفمبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Medica.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Emo.png" alt="معرض EMO" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">حالي</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض EMO لتكنولوجيا الإنتاج</h3>
+                            <p class="text-gray-600 text-sm mb-4">المعرض الرائد لتكنولوجيا الانتاج، يقدم أحدث ما توصلت اليه الصناعة الحديثة الذكية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>هانوفر - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>22-26 سبتمبر 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Emo.html"><button class="w-full btn-primary text-white font-semibold py-2 px-4 rounded-lg">تفاصيل أكثر</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="past-tab" class="tab-content hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Furniture.png" alt="معرض صناعة الأثاث والتصميم" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض صناعة الأثاث والتصميم</h3>
+                            <p class="text-gray-600 text-sm mb-4">يجذب هذا المعرض الشركات العاملة في صناعة الأثاث وتصميم الديكورات الداخلية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>كولونيا - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>20-23 مايو 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Furniture.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Eba.png" alt="معرض iba لصناعة الحلويات" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض iba لصناعة الحلويات</h3>
+                            <p class="text-gray-600 text-sm mb-4">أكبر معرض عالمي متخصص في صناعة المعجنات والحلويات، يجمع أبرز الشركات والخبراء.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>دوسلدورف - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>18-22 مايو 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Eba.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Candies.png" alt="معرض ISM" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض الحلويات (ISM)</h3>
+                            <p class="text-gray-600 text-sm mb-4">الحدث الأبرز عالميًا في مجال الحلويات والوجبات الخفيفة، وهو فرصة للقاء كبرى الشركات.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>كولونيا - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>2-5 فبراير 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="ism.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="London.png" alt="معرض أسبوع البناء - لندن" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض أسبوع البناء - لندن</h3>
+                            <p class="text-gray-600 text-sm mb-4">المصنف الأول على معارض البناء في بريطانيا، ويستقطب جميع الشركات العاملة في المجال.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>لندن - بريطانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>7-9 مايو 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="london.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Bao.png" alt="معرض BAU" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض BAU للهندسة المعمارية</h3>
+                            <p class="text-gray-600 text-sm mb-4">يستقطب المعرض العاملين بمجال البناء من شركات مقاولات ومكاتب هندسية واستشارية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>ميونيخ - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>13-18 يناير 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="BAO.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Bauma.png" alt="معرض BAUMA" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض BAUMA لآليات البناء</h3>
+                            <p class="text-gray-600 text-sm mb-4">حدث عالمي في مجال آلات البناء، مواد البناء، معدات التعدين، ومركبات البناء.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>ميونيخ - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>7-13 أبريل 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Bauma.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="intersolar.png" alt="معرض Intersolar" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض Intersolar للطاقة الشمسية</h3>
+                            <p class="text-gray-600 text-sm mb-4">معرض دولي للطاقة البديلة التي يتجه إليها العالم حالياً، ويستقطب أهم الشركات العالمية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>ميونيخ - ألمانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>7-9 مايو 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="intersolar.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+
+                    <div class="exhibition-card bg-white rounded-xl shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="Building the Future .png" alt="معرض Futurebuild" class="exhibition-image w-full h-full object-cover">
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white text-xs font-bold px-3 py-1 rounded-full">سابق</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">معرض Futurebuild لبناء المستقبل</h3>
+                            <p class="text-gray-600 text-sm mb-4">الوجهة المثالية لشركات البناء الرائدة والمهنيين المتخصصين في البناء والهندسة المدنية.</p>
+                            <div class="flex items-center text-gray-500 text-sm mb-2"><i class="ri-map-pin-line mr-2 text-primary"></i>لندن - بريطانيا</div>
+                            <div class="flex items-center text-gray-500 text-sm"><i class="ri-calendar-line mr-2 text-primary"></i>4-6 مارس 2025</div>
+                        </div>
+                        <div class="p-6 bg-gray-50 border-t">
+                            <a href="Building the Future.html"><button class="w-full bg-gray-200 text-gray-600 font-semibold py-2 px-4 rounded-lg cursor-not-allowed">عرض التفاصيل</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="services" class="relative pt-32 pb-20 bg-gray-100">
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20conference%20hall%20with%20business%20professionals%20planning%20an%20event%2C%20blueprints%20and%20laptops%2C%20bright%20and%20professional%20atmosphere%2C%20blue%20and%20gold%20accents&width=1920&height=1080&seq=services_hero&orientation=landscape' );"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        
+        <div class="max-w-full mx-auto px-4 h-full flex items-center relative z-10">
+            <div class="max-w-4xl text-center mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    خدماتنا المتكاملة لنجاح فعالياتكم
+                </h1>
+                <p class="text-xl text-white/90 mb-8">
+                    نقدم حلولاً شاملة ومبتكرة لتنظيم المعارض والمؤتمرات، تضمن تحقيق أهدافكم وتجاوز توقعاتكم.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-list" class="py-20 bg-white">
+        <div class="max-w-full mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ما نقدمه لكم</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">من الفكرة إلى التنفيذ، نحن شريككم في كل خطوة لضمان تجربة استثنائية ونتائج مثمرة.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8 service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-6 service-icon">
+                        <i class="ri-calendar-event-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">تنظيم المعارض الدولية</h3>
+                    <p class="text-gray-700">نخطط وننفذ معارض دولية متكاملة على المستويين المحلي والعالمي، مما يفتح آفاقًا جديدة لأعمالكم.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-6 service-icon">
+                        <i class="ri-global-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">تسهيل المشاركات الدولية</h3>
+                    <p class="text-gray-700">نسهل للشركات العراقية المشاركة في أبرز المعارض والمؤتمرات حول العالم، ونوفر لهم الدعم الكامل.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-6 service-icon">
+                        <i class="ri-truck-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">الدعم اللوجستي المتكامل</h3>
+                    <p class="text-gray-700">نوفر حزمًا لوجستية شاملة تشمل التأشيرات، حجوزات الطيران، الإقامة، والنقل للمشاركين.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-6 service-icon">
+                        <i class="ri-layout-3-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">تصميم وبناء الأجنحة</h3>
+                    <p class="text-gray-700">نصمم ونبني أجنحة عرض مبتكرة وجذابة تعكس هوية علامتكم التجارية بأفضل صورة ممكنة.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 service-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-6 service-icon">
+                        <i class="ri-translate-2 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">الترجمة والتغطية الإعلامية</h3>
+                    <p class="text-gray-700">نقدم خدمات ترجمة فورية وتغطية إعلامية احترافية لضمان وصول رسالتكم بوضوح لأوسع جمهور.</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8 service-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full text-primary mb-6 service-icon">
+                        <i class="ri-lightbulb-flash-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">الاستشارات التسويقية</h3>
+                    <p class="text-gray-700">نقدم استشارات متخصصة حول أفضل استراتيجيات دخول الأسواق الجديدة وفرص الاستثمار المتاحة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 newsletter-bg relative overflow-hidden">
+        <div class="max-w-full mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-2xl md:text-4xl font-bold text-white mb-6">هل تخطط للمشاركة في معرض دولي؟</h2>
+                <p class="text-lg md:text-xl text-white/90 mb-8">دعنا نساعدك في تحقيق أقصى استفادة من مشاركتك</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-white text-primary rounded-button px-6 py-3 text-base md:text-lg font-medium hover:bg-gray-100 transition-all duration-300 hover:scale-105 whitespace-nowrap" onclick="window.location.href='https://typecard.com/418518d1/'">
+                        <span class="flex items-center justify-center">
+                           <span>احجز استشارة مجانية</span>
+                            <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                <i class="ri-calendar-check-line"></i>
+                            </div>
+                        </span>
+                    </button>
+                    <button class="bg-transparent border border-white text-white rounded-button px-6 py-3 text-base md:text-lg font-medium hover:bg-white/10 transition-all duration-300 hover:scale-105 whitespace-nowrap" onclick="window.location.href='https://typecard.com/418518d1/'">
+                        <span class="flex items-center justify-center">
+                           <span>تواصل معنا</span>
+                            <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-20 bg-gray-50">
+        <div class="max-w-full mx-auto px-4">
+            <div class="text-center mb-12 md:mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">تواصل معنا</h2>
+                <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">نحن هنا للإجابة على استفساراتك ومساعدتك في تحقيق أهدافك</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">أرسل لنا رسالة</h3>
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">الاسم الكامل</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary transition-all duration-300" placeholder="أدخل اسمك الكامل" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">البريد الإلكتروني</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary transition-all duration-300" placeholder="أدخل بريدك الإلكتروني" required>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">الموضوع</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary transition-all duration-300" placeholder="أدخل موضوع الرسالة" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">الرسالة</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary transition-all duration-300" placeholder="اكتب رسالتك هنا..." required></textarea>
+                            </div>
+                            <div class="mb-6">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                    <span class="text-gray-700">أوافق على سياسة الخصوصية وشروط الاستخدام</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-primary text-white rounded-button px-8 py-3 font-medium whitespace-nowrap w-full">
+                                <span class="flex items-center justify-center">
+                                    <span>إرسال الرسالة</span>
+                                    <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                        <i class="ri-send-plane-line"></i>
+                                    </div>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">معلومات التواصل</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 flex-shrink-0">
+                                    <i class="ri-map-pin-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">المقر الرئيسي</h4>
+                                    <p class="text-gray-700">العراق - كربلاء - الروضتين</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 flex-shrink-0">
+                                    <i class="ri-phone-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">اتصل بنا</h4>
+                                    <p class="text-gray-700">009647801068802</p>
+                                    <p class="text-gray-700">009647858700800</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start" data-aos="fade-up" data-aos-delay="300">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 flex-shrink-0">
+                                    <i class="ri-mail-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">البريد الإلكتروني</h4>
+                                    <p class="text-gray-700">info@almoujexpo.org</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start" data-aos="fade-up" data-aos-delay="400">
+                                <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full text-primary mr-4 flex-shrink-0">
+                                    <i class="ri-time-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 mb-1">ساعات العمل</h4>
+                                    <p class="text-gray-700">الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً</p>
+                                    <p class="text-gray-700">الجمعة - السبت: مغلق</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-full mx-auto px-4 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-center md:text-right">
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <img src="logo almouj .png" alt="Al Mouj Logo" class="h-16 mx-auto md:mx-0 mb-4">
+                    <p class="text-gray-400 mb-6">شركة الموج إكسبو رائدة في تنظيم المعارض والمؤتمرات الدولية بمعايير عالمية وخبرات متميزة.</p>
+                    <div class="flex space-x-4 space-x-reverse justify-center md:justify-start">
+                        <a href="https://www.facebook.com/share/178eTQMvpR/" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:text-white hover:bg-primary transition-all duration-300 hover:scale-110">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="https://wa.me/9647858700800" target="_blank" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full text-gray-400 hover:text-white hover:bg-primary transition-all duration-300 hover:scale-110">
+                            <i class="ri-whatsapp-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-lg font-bold mb-6">روابط سريعة</h3>
+                    <ul class="space-y-4">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">من نحن</a></li>
+                        <li><a href="#exhibitions" class="text-gray-400 hover:text-white transition-colors">المعارض</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">خدماتنا</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-lg font-bold mb-6">المعارض القادمة</h3>
+                    <ul class="space-y-4">
+                        <li><a href="Medica.html" class="text-gray-400 hover:text-white transition-colors">معرض ميديكا 2025</a></li>
+                        <li><a href="Plastics k .html" class="text-gray-400 hover:text-white transition-colors">معرض K للبلاستيك 2025</a></li>
+                        <li><a href="Anuga.html" class="text-gray-400 hover:text-white transition-colors">معرض Anuga الغذائي 2025</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 py-6">
+            <div class="max-w-full mx-auto px-4 text-center">
+                <p class="text-gray-400">&copy; 2025 جميع الحقوق محفوظة لشركة الموج للمعارض الدولية.</p>
+                <p class="text-sm text-gray-500 mt-2">تصميم وتطوير بواسطة فريق الموج.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/9647858700800" target="_blank">
+        <div class="chat-button" id="chat-button">
+            <i class="ri-whatsapp-line"></i>
+        </div>
+    </a>
+    <button id="back-to-top" class="fixed bottom-24 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-all duration-300 hover:scale-110 opacity-0 invisible z-50 flex items-center justify-center">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Progress Bar
+        window.addEventListener('scroll', function() {
+            const progressBar = document.getElementById('progress-bar');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            progressBar.style.width = scrollPercent + '%';
+        });
+
+        // Countdown Timer
+        const eventDate = new Date("March 3, 2026 00:00:00").getTime();
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("days").innerHTML = "0";
+                document.getElementById("hours").innerHTML = "0";
+                document.getElementById("minutes").innerHTML = "0";
+                document.getElementById("seconds").innerHTML = "0";
+            }
+        }, 1000);
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.add('active'));
+            closeMobileMenuButton.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+            });
+        });
+
+        // Statistics Counter Animation
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-count'));
+                    let current = 0;
+                    const increment = Math.max(1, Math.floor(target / 100));
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(timer);
+                        }
+                        entry.target.textContent = Math.floor(current);
+                    }, 20);
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        });
+        document.querySelectorAll('.stat-number').forEach(stat => statsObserver.observe(stat));
+
+        // Smooth Scrolling & Active Nav Link
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        backToTopButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Navbar Background Change on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('bg-white/98', window.pageYOffset > 50);
+            navbar.classList.toggle('shadow-lg', window.pageYOffset > 50);
+        });
+
+        // Form Submissions
+        document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
+            this.reset();
+        });
+
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.add('hidden'));
+
+                button.classList.add('active');
+                const activeTabContent = document.getElementById(targetTab + '-tab');
+                if (activeTabContent) {
+                    activeTabContent.classList.remove('hidden');
+                }
+            });
+        });
+
+        window.onload = function() {
+  // النزول إلى أسفل الصفحة
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+
+  // الرجوع إلى الأعلى بعد ثانيتين
+  setTimeout(function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, 2000);
+}
+
+
+window.onload = function() {
+    // نزول لأسفل الصفحة
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+
+    // بعد ثانيتين يرجع للأعلى
+    setTimeout(function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+      // بعد الرجوع للأعلى نخفي شاشة التغطية
+      setTimeout(function() {
+        document.getElementById("overlay").style.display = "none";
+      }, 2000); // وقت إضافي حتى يرجع للأعلى
+    }, 2000);
+  }
+
+
+    </script>
+</body>
+</html>
